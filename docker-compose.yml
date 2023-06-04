@@ -2,10 +2,14 @@ version: '3'
 
 services:
   client:
+    container_name: ie303.n21.frontend
     build:
-      context: ./client
-      target: runner
+      context: .
       dockerfile: Dockerfile
-    command: nginx -g 'daemon off;'
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
     ports:
-      - "80:80"
+      - 3001:3000
+    environment:
+      - CHOKIDAR_USEPOLLING=true

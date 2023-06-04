@@ -1,22 +1,15 @@
-# syntax=docker/dockerfile:1
-FROM node:lts-alpine3.17 AS builder
+FROM node:17-alpine
 
 WORKDIR /client
 
 COPY ["package.json", "package-lock.json*", "./"]
 
-RUN npm install -g npm@9.5.0 --silent
-
 RUN npm install --silent
 
-COPY . .
+RUN npm install -g npm@9.5.0 --silent
 
-RUN npm run build
+COPY . ./
 
-FROM nginx:alpine AS runner
+EXPOSE 3000
 
-COPY --from=builder /client/build /usr/share/nginx/html
-
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["npm", "start"]
