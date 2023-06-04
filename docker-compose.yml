@@ -5,6 +5,7 @@ services:
     build:
       context: ./client
       target: runner
+      dockerfile: Dockerfile
     command: nginx -g 'daemon off;'
     ports:
       - "80:80"
