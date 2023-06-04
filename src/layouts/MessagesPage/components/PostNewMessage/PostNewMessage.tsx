@@ -15,7 +15,7 @@ const PostNewMessage = () => {
     const [displaySuccess, setDisplaySuccess] = useState(false);
 
     const submitNewQuestion = async () => {
-        const url = `http://54.151.185.48:8080/api/messages/secure/add/message`;
+        const url = `http://54.251.217.42:8080/api/messages/secure/add/message`;
         if (authState?.isAuthenticated && title !== '' && question !== '') {
             const messageRequestModel: MessageModel = new MessageModel(title, question);
             const requestOptions = {
@@ -44,7 +44,7 @@ const PostNewMessage = () => {
 
     return (
         <div className={cx('card', 'mt-3')}>
-            <div className={cx('card-header')}>Ask question to Luv 2 Read Admin</div>
+            <div className={cx('card-header')}>Ask question to VNLibrary Admin</div>
             <div className={cx('card-body')}>
                 <form method="POST">
                     {displayWarning && (

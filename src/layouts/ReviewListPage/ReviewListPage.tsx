@@ -23,7 +23,7 @@ const ReviewListPage = () => {
 
     useEffect(() => {
         const fetchBookReviewsData = async () => {
-            const reviewUrl: string = `http://54.151.185.48:8080/api/reviews/search/findByBookId?bookId=${bookId}&page=${
+            const reviewUrl: string = `http://54.251.217.42:8080/api/reviews/search/findByBookId?bookId=${bookId}&page=${
                 currentPage - 1
             }&size=${reviewsPerPage}`;
 

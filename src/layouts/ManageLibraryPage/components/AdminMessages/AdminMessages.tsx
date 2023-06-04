@@ -30,7 +30,7 @@ const AdminMessages = () => {
     useEffect(() => {
         const fetchUserMessages = async () => {
             if (authState && authState.isAuthenticated) {
-                const url = `http://54.151.185.48:8080/api/messages/search/findByClosed/?closed=false&page=${
+                const url = `http://54.251.217.42:8080/api/messages/search/findByClosed/?closed=false&page=${
                     currentPage - 1
                 }&size=${messagesPerPage}`;
                 const requestOptions = {
@@ -71,7 +71,7 @@ const AdminMessages = () => {
     }
 
     const submitResponseToQuestion = async (id: number, response: string) => {
-        const url = `http://54.151.185.48:8080/api/messages/secure/admin/message`;
+        const url = `http://54.251.217.42:8080/api/messages/secure/admin/message`;
         if (authState && authState?.isAuthenticated && id !== null && response !== '') {
             const messageAdminRequestModel: AdminMessageRequest = new AdminMessageRequest(id, response);
             const requestOptions = {

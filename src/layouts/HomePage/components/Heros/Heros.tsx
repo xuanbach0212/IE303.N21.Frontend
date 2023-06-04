@@ -58,7 +58,7 @@ const Heros = () => {
                             <h1>Our collection is always changing!</h1>
                             <p className={cx('lead')}>
                                 Try to check in daily as our collection is always changing! We work nonstop to provide
-                                the most accurate book selection possible for our Luv 2 Read students! We are diligent
+                                the most accurate book selection possible for our VNLibrary students! We are diligent
                                 about our book selection and our books are always going to be our top priority.
                             </p>
                         </div>
@@ -97,7 +97,7 @@ const Heros = () => {
                             <h1>Our collection is always changing!</h1>
                             <p className={cx('lead')}>
                                 Try to check in daily as our collection is always changing! We work nonstop to provide
-                                the most accurate book selection possible for our Luv 2 Read students! We are diligent
+                                the most accurate book selection possible for our VNLibrary students! We are diligent
                                 about our book selection and our books are always going to be our top priority.
                             </p>
                         </div>

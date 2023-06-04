@@ -25,7 +25,7 @@ const Navbar = () => {
         <div className={cx('wrapper')}>
             <nav className={cx('navbar', 'navbar-expand-lg', 'navbar-dark', 'main-color', 'py-3')}>
                 <div className={cx('container-fluid')}>
-                    <span className={cx('navbar-brand')}>Luv 2 Read</span>
+                    <span className={cx('navbar-brand')}>VNLibrary</span>
                     <button
                         className={cx('navbar-toggler')}
                         type="button"

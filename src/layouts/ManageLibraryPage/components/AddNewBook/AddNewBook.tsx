@@ -44,7 +44,7 @@ const AddNewBook = () => {
     };
 
     const submitNewBook = async () => {
-        const url = `http://54.151.185.48:8080/api/admin/secure/add/book`;
+        const url = `http://54.251.217.42:8080/api/admin/secure/add/book`;
         if (
             authState?.isAuthenticated &&
             title !== '' &&

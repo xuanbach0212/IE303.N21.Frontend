@@ -6,8 +6,6 @@ COPY ["package.json", "package-lock.json*", "./"]
 
 RUN npm install --silent
 
-RUN npm install -g npm@9.5.0 --silent
-
 COPY . ./
 
 EXPOSE 3000

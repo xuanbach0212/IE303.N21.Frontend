@@ -16,7 +16,7 @@ const Carousel = () => {
 
     useEffect(() => {
         const fetchBooks = async () => {
-            const baseUrl: string = `http://54.151.185.48:8080/api/books`;
+            const baseUrl: string = `http://54.251.217.42:8080/api/books`;
 
             const url: string = `${baseUrl}?page=0&size=9`;
 
