@@ -22,7 +22,7 @@ const Loans = () => {
     useEffect(() => {
         const fetchUserCurrentLoans = async () => {
             if (authState && authState.isAuthenticated) {
-                const url = `http://54.255.135.69:8080/api/books/secure/currentloans`;
+                const url = `http://54.151.185.48:8080/api/books/secure/currentloans`;
                 const requestOptions = {
                     method: 'GET',
                     headers: {
@@ -59,7 +59,7 @@ const Loans = () => {
     }
 
     const returnBook = async (bookId: number) => {
-        const url = `http://54.255.135.69:8080/api/books/secure/return/?bookId=${bookId}`;
+        const url = `http://54.151.185.48:8080/api/books/secure/return/?bookId=${bookId}`;
         const requestOptions = {
             method: 'PUT',
             headers: {
@@ -75,7 +75,7 @@ const Loans = () => {
     };
 
     const renewLoan = async (bookId: number) => {
-        const url = `http://54.255.135.69:8080/api/books/secure/renew/loan/?bookId=${bookId}`;
+        const url = `http://54.151.185.48:8080/api/books/secure/renew/loan/?bookId=${bookId}`;
         const requestOptions = {
             method: 'PUT',
             headers: {

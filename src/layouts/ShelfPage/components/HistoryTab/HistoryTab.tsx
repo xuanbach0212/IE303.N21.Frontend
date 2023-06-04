@@ -24,7 +24,7 @@ const History = () => {
     useEffect(() => {
         const fetchUserHistory = async () => {
             if (authState && authState.isAuthenticated) {
-                const url = `http://54.255.135.69:8080/api/histories/search/findBooksByUserEmail/?userEmail=${
+                const url = `http://54.151.185.48:8080/api/histories/search/findBooksByUserEmail/?userEmail=${
                     authState.accessToken?.claims.sub
                 }&page=${currentPage - 1}&size=5`;
                 const requestOptions = {
