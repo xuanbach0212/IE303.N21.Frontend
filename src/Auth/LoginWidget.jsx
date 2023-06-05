@@ -13,9 +13,9 @@ const LoginWidget = ({ config }) => {
         console.log('Sign in error: ', err);
     };
 
-    if (!authState) {
-        return <SpinnerLoading />;
-    }
+    // if (!authState) {
+    //     return <SpinnerLoading />;
+    // }
 
     return authState.isAuthenticated ? (
         <Redirect to="/home" />
