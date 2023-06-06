@@ -6,6 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    command: nginx -g 'daemon off;'
     ports:
       - 80:80
     environment:

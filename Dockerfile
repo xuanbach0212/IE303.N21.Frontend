@@ -6,9 +6,9 @@ COPY ["package.json", "package-lock.json*", "./"]
 
 RUN npm install --silent
 
-RUN npm run build
+COPY . .
 
-COPY . ./
+RUN npm run build
 
 FROM nginx:1.21.1-alpine
 
