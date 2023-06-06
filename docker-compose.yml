@@ -1,15 +1,13 @@
 version: '3'
 
 services:
-  client:
+  app:
     container_name: ie303.n21.frontend
     build:
       context: .
       dockerfile: Dockerfile
-    volumes:
-      - '.:/app'
-      - '/app/node_modules'
     ports:
-      - 3000:3000
+      - 80:80
     environment:
       - CHOKIDAR_USEPOLLING=true
+    restart: always
