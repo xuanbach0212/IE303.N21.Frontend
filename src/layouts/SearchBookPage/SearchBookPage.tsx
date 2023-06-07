@@ -22,7 +22,7 @@ const SearchBooksPage = () => {
 
     useEffect(() => {
         const fetchBooks = async () => {
-            const baseUrl: string = `http://54.251.217.42:8080/api/books`;
+            const baseUrl: string = `http://54.179.229.192:8080/api/books`;
 
             let url: string = '';
 
