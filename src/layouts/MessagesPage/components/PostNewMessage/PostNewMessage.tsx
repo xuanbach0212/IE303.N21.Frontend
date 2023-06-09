@@ -15,7 +15,7 @@ const PostNewMessage = () => {
     const [displaySuccess, setDisplaySuccess] = useState(false);
 
     const submitNewQuestion = async () => {
-        const url = `http://54.179.229.192:8080/api/messages/secure/add/message`;
+        const url = `http://localhost:8080/api/messages/secure/add/message`;
         if (authState?.isAuthenticated && title !== '' && question !== '') {
             const messageRequestModel: MessageModel = new MessageModel(title, question);
             const requestOptions = {

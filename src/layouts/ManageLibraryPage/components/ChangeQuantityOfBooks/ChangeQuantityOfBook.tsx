@@ -23,7 +23,7 @@ export const ChangeQuantityOfBook: React.FC<{ book: BookModel; deleteBook: any }
     }, [book.copies, book.copiesAvailable]);
 
     const increaseQuantity = async () => {
-        const url = `https://54.179.229.192:8080/api/admin/secure/increase/book/quantity/?bookId=${book?.id}&n=${adjustQuantity}`;
+        const url = `https://localhost:8080/api/admin/secure/increase/book/quantity/?bookId=${book?.id}&n=${adjustQuantity}`;
         const requestOptions = {
             method: 'PUT',
             headers: {
@@ -45,7 +45,7 @@ export const ChangeQuantityOfBook: React.FC<{ book: BookModel; deleteBook: any }
         if (adjustQuantity > remaining) {
             setIsValidAdjust(false);
         } else {
-            const url = `https://54.179.229.192:8080/api/admin/secure/decrease/book/quantity/?bookId=${book?.id}&n=${adjustQuantity}`;
+            const url = `https://localhost:8080/api/admin/secure/decrease/book/quantity/?bookId=${book?.id}&n=${adjustQuantity}`;
             const requestOptions = {
                 method: 'PUT',
                 headers: {
@@ -66,7 +66,7 @@ export const ChangeQuantityOfBook: React.FC<{ book: BookModel; deleteBook: any }
 
     const handleDeleteBook = async () => {
         if (window.confirm(`Are you sure you want to delete book '${book.title}'?`)) {
-            const url = `https://54.179.229.192:8080/api/admin/secure/delete/book/?bookId=${book?.id}`;
+            const url = `https://localhost:8080/api/admin/secure/delete/book/?bookId=${book?.id}`;
             const requestOptions = {
                 method: 'DELETE',
                 headers: {

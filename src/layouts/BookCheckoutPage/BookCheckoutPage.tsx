@@ -38,7 +38,7 @@ const BookCheckoutPage = () => {
     //fetch book
     useEffect(() => {
         const fetchBook = async () => {
-            const baseUrl: string = `http://54.179.229.192:8080/api/books/${bookId}`;
+            const baseUrl: string = `http://localhost:8080/api/books/${bookId}`;
 
             const response = await fetch(baseUrl);
 
@@ -71,7 +71,7 @@ const BookCheckoutPage = () => {
     //fetch book reviews
     useEffect(() => {
         const fetchBookReviews = async () => {
-            const reviewUrl: string = `http://54.179.229.192:8080/api/reviews/search/findByBookId?bookId=${bookId}`;
+            const reviewUrl: string = `http://localhost:8080/api/reviews/search/findByBookId?bookId=${bookId}`;
 
             const responseReviews = await fetch(reviewUrl);
 
@@ -118,7 +118,7 @@ const BookCheckoutPage = () => {
     useEffect(() => {
         const fetchUserReviewBook = async () => {
             if (authState && authState.isAuthenticated) {
-                const url = `http://54.179.229.192:8080/api/reviews/secure/user/book/?bookId=${bookId}`;
+                const url = `http://localhost:8080/api/reviews/secure/user/book/?bookId=${bookId}`;
                 const requestOptions = {
                     method: 'GET',
                     headers: {
@@ -145,7 +145,7 @@ const BookCheckoutPage = () => {
     useEffect(() => {
         const fetchUserCurrentLoansCount = async () => {
             if (authState && authState.isAuthenticated) {
-                const url = `http://54.179.229.192:8080/api/books/secure/currentloans/count`;
+                const url = `http://localhost:8080/api/books/secure/currentloans/count`;
                 const requestOptions = {
                     method: 'GET',
                     headers: {
@@ -172,7 +172,7 @@ const BookCheckoutPage = () => {
     useEffect(() => {
         const fetchUserCheckedOutBook = async () => {
             if (authState && authState.isAuthenticated) {
-                const url = `http://54.179.229.192:8080/api/books/secure/ischeckedout/byuser/?bookId=${bookId}`;
+                const url = `http://localhost:8080/api/books/secure/ischeckedout/byuser/?bookId=${bookId}`;
                 const requestOptions = {
                     method: 'GET',
                     headers: {
@@ -210,7 +210,7 @@ const BookCheckoutPage = () => {
     }
 
     const checkoutBook = async () => {
-        const url = `http://54.179.229.192:8080/api/books/secure/checkout/?bookId=${book?.id}`;
+        const url = `http://localhost:8080/api/books/secure/checkout/?bookId=${book?.id}`;
         const requestOptions = {
             method: 'PUT',
             headers: {
@@ -232,7 +232,7 @@ const BookCheckoutPage = () => {
         }
 
         const reviewRequestModel = new ReviewRequestModel(starInput, bookId, reviewDescription);
-        const url = `http://54.179.229.192:8080/api/reviews/secure`;
+        const url = `http://localhost:8080/api/reviews/secure`;
         const requestOptions = {
             method: 'POST',
             headers: {
